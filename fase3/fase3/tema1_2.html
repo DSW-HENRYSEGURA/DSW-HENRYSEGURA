@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/design.css">
+        <title>Hojas de estilo en cascada</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <img src="img/logo_unad.png" class="logo" alt="">
+            <div class="title">
+                <h1>Proyecto de sitio WEB año 2022 periodo 16-02</h1>
+            </div>
+            
+        </header>
+
+        <nav class="navbar">
+            <ul class="main-list">
+                <li class="item"><a href="index_fase3.html">Inicio</a></li>
+                <li class="item">Temas
+                    <ul class="submenu">
+                        <li class="subitem"><a href="tema1_1.html">Hojas de estilo en cascada CSS</a></li>
+                        <li class="subitem"><a href="tema2.html">Frameworks CSS</a></li>
+                    </ul>
+                </li>
+                <li class="item">Recursos digitales
+                    <ul class="submenu">
+                        <li class="subitem"><a href="recurso1.html">Recurso 1</a></li>
+                        <li class="subitem"><a href="recurso2.html">Recurso 2</a></li>
+                    </ul>
+                </li>
+                <li class="item">Aprendizaje
+                    <ul class="submenu">
+                        <li class="subitem"><a href="">Actividad 1</a></li>
+                        <li class="subitem"><a href="">Actividad 2</a></li>
+                    </ul>
+                </li>
+                <li class="item"><a href="autor.html">Acerca del autor</a></li>
+            </ul>
+        </nav>
+
+        <aside class="aside">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </aside>
+
+        <main class="main">
+            <article>
+                <h1 class="subtitle">Hojas de estilo en cascada (CSS)</h1>
+                
+                <section class="section">
+                    <h2>Uso de estilos en un documento</h2>
+                    <p>
+                        Todo lo que hemos visto hasta ahora no es suficiente para usar nuestros estilos en un documento HTML real, ya que todavía no sabemos donde colocar las declaraciones CSS. El eslabón final en esta cadena es permitir a los agentes de usuario saber dónde pueden encontrar información de estilos para el documento que están interpretando. Y esto es algo que le corresponde a HTML.
+                    </p>
+                    <p>
+                        Para este propósito, HTML presenta tres métodos para agregar información de estilo a un documento. Éstos son descriptos en las secciones siguientes.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>El atributo styles</h2>
+                    <p>
+                        El uso del atributo style es la forma más fácil y directa de aplicar declaraciones de estilo a un elemento. Este atributo puede tener como contenido, cualquier número de declaraciones de estilo, separadas unas de otras por un punto y coma (";"). Como style es un atributo global, puede ser usado en cualquier elemento de HTML.
+                    </p>
+                    <p>
+                        El ejemplo siguiente algunas propiedades de estilo son aplicadas a un par de elementos, mediante el atributo style.
+                    </p>
+
+                    <img style="width: 90%;" src="img/CSS8.png" alt="">
+
+                    <p>
+                        Pero a pesar de toda su simplicidad e inmediatez, el uso de este método rompe de alguna manera uno de los principales beneficios de CSS: la posibilidad de crear declaraciones de estilo que pueden ser reutilizadas en tantos elementos como sea posible, algo que se traduce en flexibilidad y portabilidad. Solo imagínate teniendo que aplicar este mismo estilo a cientos de elementos en tus documentos.
+                    </p>
+
+                    <p>
+                        Esto no significa que este enfoque no sea útil. De hecho, puede ser muy pertinente usarlo cuando necesitas aplicar un estilo a un solo elemento y por única vez. De cualquier modo, las alternativas siguientes resolverán el problema mencionado en el párrafo anterior.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>El elemento style</h2>
+
+                    <p>
+                        El elemento style es un contenedor para declaraciones de estilo. Dentro de este elemento podemos arrojar cualquier número de declaraciones de estilo, siempre y cuando estén correctamente organizadas en grupos de selectores. En otras palabras, todos los ejemplos vistos en la sección sobre selectores, pueden ser ubicados en medio de las etiquetas de este elemento.
+                    </p>
+
+                    <p>
+                        Este elemento tiene la particularidad de que, cuando es utilizado en su forma tradicional (esto es, sin que el atributo scoped esté presente), sólo puede ser declarado en la sección del encabezado (head) del documento.
+                    </p>
+
+                    <p>
+                        El siguiente ejemplo muestra un extracto de un documento donde el elemento style está siendo utilizado para proveer atributos a algunos elementos en el cuerpo (body). Más específicamente, dos selectores de tipo proveen reglas de estilo para los elementos h1 y p.
+                    </p>
+
+                    <img style="width: 90%;" src="img/CSS9.png" alt="">
+                </section>
+
+                <section class="section">
+                    <h2>Archivos externos</h2>
+
+                    <p>
+                        La ventaja de utilizar un archivo externo para almacenar información de estilo reside en la posibilidad de compartir ese archivo entre un gran número de documentos. Cuando un documento es cargado, el navegador detecta la referencia al archivo de hojas de estilo, cargando y aplicando los estilos como si fueran parte del documento.
+                    </p>
+
+                    <p>
+                        Un archivo externo de hojas de estilo puede ser insertando en el documento con el elemento link, teniendo el valor "text/css" en el atributo type, y el URI del archivo de hojas de estilo en el atributo href. Ten presente que, como style, este elemento solo puede estar ubicado en el bloque de encabezado (head) del documento.
+                    </p>
+
+                    <p>
+                        Acerca de los contenidos del archivo de hojas de estilo, debe presentar el mismo tipo de información que encajaría en un elemento style, esto es, cualquier número de declaraciones de estilo organizadas en grupos de selectores. El código siguiente muestra el mismo documento presentado en el ejemplo anterior, solo que aquí la información de estilo se encuentra ubicada en un archivo externo.
+                    </p>
+                    <imgstyle="width: 90%;" src="img/CSS10.png" alt="">
+                </section>
+
+                <section class="section">
+                    <h2>Herencia</h2>
+
+                    <p>
+                        La herencia es un concepto por el cual los elementos descendientes heredan las propiedades declaradas para sus ancestros. Esto no es otra cosa más que el comportamiento deseado, y evita tener que redefinir las mismas propiedades en los hijos de un elemento. El siguiente ejemplo es prueba de la herencia en CSS. Allí, los elementos heredan todas las propiedades definidas para su ancestro, el cuerpo del documento (body).
+                    </p>
+                    <img style="width: 90%;" src="img/CSS11.png" alt="">
+                </section>
+                
+                <section class="section">
+                    <h2>El orden de especificidad</h2>
+                    <p>
+                        Los estilos de diferentes orígenes y selectores son aplicados en un orden específico y unívoco. Este orden de especificidad ayuda a resolver conflictos y hace al sistema más predecible, lo que permite a los autores planear su esquema de estilos con certeza. Por ejemplo, si utilizas el atributo style y, dentro de un elemento style, un selector de clase para definir la misma propiedad de un elemento, la definición en el atributo style prevalecerá.
+                    </p>
+                    <p>
+                        La siguiente lista muestra el orden de especificidad que se aplica en CSS. Cada forma de aplicar estilos en esta lista prevalecerá cuando compita con aquellos debajo de sí.
+                        <ol>
+                            <li>El atributo style.</li>
+                            <li>El slector de ID.</li>
+                            <li>El selector de clase.</li>
+                            <li>El selector de tipo.</li>
+                            <li>El selector universal.</li>
+                        </ol>
+                    </p>
+                    <p>
+                        En el próximo ejemplo, el color del párrafo está siendo definido dos veces: en el atributo style y en el selector de tipo. Como puede preverse, el color definido en el atributo style prevalecerá.
+                    </p>
+                    <img style="width: 90%;" src="img/CSS12.png" alt="">
+                    <p>
+                        Por supuesto, la lista descripta anteriomente no dice nada acerca de los selectores avanzados, donde las combinaciones llevan al orden de especificidad lejos de la simplicidad. Sin embargo, existe un sistema para trabajar con eso también, pero el alcance de este tutorial evitará que hablemos al respecto. De cualquier modo, no deberías necesitarlo todavía, así que enfócate en los aspectos básicos y continúa con la práctica.
+                    </p>
+                </section>
+
+                <section class="section">
+                    <h2>Referencias</h2>
+                    <p>de León, D. P. (2020). Hojas de estilo en cascada (CSS). htmlquick. https://www.htmlquick.com/es/tutorials/css.html</p>
+                </section>
+
+            </article>
+
+            <div class="paginas">
+                <a href="tema1_1.html">1</a>
+                <a href="tema1_2.html">2</a>
+                
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p class="text-footer">Correo: henry_1224@hotmail.com - Skype: henry.segura91</p>
+            <p class="text-footer">28/04/2022</p>
+        </footer>
+        
+    </body>
+</html>

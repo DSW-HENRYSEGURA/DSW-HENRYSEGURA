@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #daeeee;
+}
+
+a{
+    text-decoration: none; 
+}
+
+.header{
+    height: 110px;
+    padding-top: 15px;
+    background-color: #252727;
+}
+
+.logo{
+    float: left;
+    width: 110px;
+    margin-left: 100px;
+}
+
+
+.title{    
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 150px;
+    color: white;
+}
+
+
+.navbar{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content:center;
+    align-items: center;
+    padding-left: 20px;
+    color: white;
+    height: 55px;
+    background-color: #252727;
+}
+
+.main-list{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.submenu{
+    width: 200px;
+    display: none;
+    padding: 5px;
+    margin-top: 9px;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+    background-color: #252727;
+    list-style: none;    
+}
+
+.item{
+    display: inline-block;
+    margin-left: 6px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+.subitem{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.paginas{
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.aside{
+    margin-top: 13vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    min-height: 70px;
+    min-width: 180px;
+    float: left; 
+    
+   
+}
+
+.main{
+    display: inline-block;
+    min-width: 40vw;
+    max-width: 65vw;
+    padding: 4%;
+}
+
+.video{
+    margin-top: 9%;
+}
+
+
+
+.mockup{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.section{
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.subtitle{
+    text-align: center;
+}
+
+
+.footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding-top: 15px;
+    color: white;
+    background-color: #252727;
+}
+
+.text-footer{
+    margin: 0;
+    margin-bottom: 7px; 
+}
+
+a:link{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+
+.item:hover{
+    background-color: rgb(33, 172, 172);
+}
+
+.subitem:hover{
+    background-color: rgb(33, 172, 172);
+}
+
+.item:hover .submenu{
+    display: block;
+}
